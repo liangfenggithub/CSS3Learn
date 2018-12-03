@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>选择器</title>
+    <style>
+        *{
+            padding: 0px;
+            margin:0px;
+        }
+        /* 后代选择器 */
+        #ll p{
+            color:blue;
+        }
+
+        /* 儿子选择器 */
+        #ll > p{
+            color:red;
+        }
+
+        /*兄弟选择器*/
+        #one+p{
+            color:yellow;
+        }
+        /*兄弟们选择器*/
+        .aa~p{
+            font-size:30px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="ll">
+        <p >CSS3一定要坚持下去0</p>
+        <p id="one">CSS3一定要坚持下去1</p>
+        <p >CSS3一定要坚持下去2</p>
+        <p >CSS3一定要坚持下去3</p>
+        <p >CSS3一定要坚持下去4</p>
+        <p name="hello">CSS3一定要坚持下去5</p>
+        <p>CSS3一定要坚持下去6</p>
+        <p >CSS3一定要坚持下去7</p>
+        <p>CSS3一定要坚持下去8</p>
+        <div class="mm">
+            <p class="aa">我也是p标签</p>
+            <p>我也是p标签</p>
+            <p>我也是p标签</p>
+        </div>
+    </div>
+
+</body>
+</html>

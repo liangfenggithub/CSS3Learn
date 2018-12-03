@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>子元素选择器</title>
+    <style>
+        body{
+            margin-left:100px;
+        }
+        .x{
+            width:600px;
+            height: 300px;
+            padding:50px;
+            border:solid 1px red;
+        }
+        .y{
+            width:600px;
+            height:300px;
+            border:solid 1px dodgerblue;
+            padding:50px;
+            margin-top:50px;
+        }
+
+        /*子元素选择器*/
+
+        /* 选择p元素的父元素的第一个子元素，且这个子元素为p */
+        p:nth-child(1){
+            color:firebrick;
+        }
+        /*选择p元素的父元素的第一个子元素，且这个子元素为p*/
+        p:first-child{
+            font-size:20px;
+        }
+        /*选择p元素的父元素的倒数第一个子元素，且这个子元素为p*/
+        p:last-child{
+            color:darkviolet;
+        }
+        /*选择p元素的父元素的倒数第2个子元素，且这个子元素为p*/
+        p:nth-last-child(2){
+            color:darkseagreen;
+        }
+        /*选择p元素的父元素的唯一一个子元素，且这个子元素为p*/
+        div:only-child{
+            color:darkslategrey;
+            font-size:50px;
+        }
+
+        /*选择p元素的父元素的第1个p子元素，*/
+        p:nth-of-type(1){
+            color:greenyellow;
+        }     
+
+        /*选择p元素的父元素的倒数第3个p子元素，*/
+        p:nth-last-of-type(3){
+            color:dodgerblue;
+        }      
+
+        /*选择p元素的父元素的倒数第3个p子元素，*/
+        span:first-of-type{
+            color:rgb(30, 255, 188);
+        } 
+
+        /*选择p元素的父元素的最后一个个p子元素，*/
+        p:last-of-type{
+            font-size:20px;
+        }
+        /*选择p元素的父元素的唯一的子元素为p，这个p可以不是唯一的一个子元素*/
+        /* div:only-of-type{
+            color:darkorange;
+        } */
+    </style>
+</head>
+<body>
+    <div class="x">
+        <p>在一棵树的时候最好是十年前，其次是现在</p>
+        <p>在一棵树的时候最好是十年前，其次是现在</p>
+        <p>在一棵树的时候最好是十年前，其次是现在</p>
+        <p>在一棵树的时候最好是十年前，其次是现在</p>
+        <p>在一棵树的时候最好是十年前，其次是现在</p>
+        <p>在一棵树的时候最好是十年前，其次是现在</p>
+    </div>
+
+    <div class="y">
+        <span>我是span标签</span>
+        <p>最怕的是一生碌碌无为，还说自己是平凡可贵</p>
+        <p>最怕的是一生碌碌无为，还说自己是平凡可贵</p>
+        <p>最怕的是一生碌碌无为，还说自己是平凡可贵</p>
+        <p>最怕的是一生碌碌无为，还说自己是平凡可贵</p>
+        <p>最怕的是一生碌碌无为，还说自己是平凡可贵</p>
+        <p>最怕的是一生碌碌无为，还说自己是平凡可贵</p>
+        <p>最怕的是一生碌碌无为，还说自己是平凡可贵</p>
+    </div>
+    <div class="a">
+        <div>aaa</div>
+    </div>
+    <div class="b">
+        <p>ddd</p>
+        <div>aaaa</div>
+    </div>
+</body>
+</html>

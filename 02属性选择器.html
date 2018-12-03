@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>选择器</title>
+    <style>
+        *{
+            padding: 0px;
+            margin:0px;
+        }
+       
+
+        /*属性选择器*/
+
+        /* 有name属性的元素 */
+        #ll p[name]{
+            font-size: 30px;
+        }
+
+        /*name属性以a开头的元素*/
+        #ll p[name^=a]{
+            color:slateblue;
+        }
+
+        /*name属性以d结尾的元素*/
+        #ll p[name$=d]{
+            color:red;
+        }
+
+        /* name属性为mm的元素*/
+        p[gg=lf]{
+            color:salmon;
+        }
+
+        /*name属性包含o的元素*/
+        p[class*=o]{
+            color:green;
+        }
+    </style>
+</head>
+<body>
+    <div id="ll">
+        <p >CSS3一定要坚持下去0</p>
+        <p id="one">CSS3一定要坚持下去1</p>
+        <p >CSS3一定要坚持下去2</p>
+        <p name="ed">CSS3一定要坚持下去3</p>
+        <p name="about">CSS3一定要坚持下去4</p>
+        <p name="abc">CSS3一定要坚持下去5</p>
+        <p>CSS3一定要坚持下去6</p>
+        <p gg="lf">CSS3一定要坚持下去7</p>
+        <p>CSS3一定要坚持下去8</p>
+        <div class="mm">
+            <p class="aoa">我也是p标签</p>
+            <p>我也是p标签</p>
+            <p>我也是p标签</p>
+        </div>
+    </div>
+
+</body>
+</html>
