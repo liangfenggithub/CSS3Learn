@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>文本的溢出隐藏</title>
+    <style>
+        body{
+            margin:100px 200px;
+        }
+        h3{
+            height: 30px;
+            width:200px;
+            border:solid 1px dodgerblue;
+            /* 要实现的效果是长标题长出的部分隐藏，并以省略号显示，手机端用到的较多 */
+            /* 步骤1 不换行 */
+            white-space: nowrap;
+            /* 步骤2 溢出隐藏 */
+            overflow: hidden;
+            /* 步骤3 溢出以省略号表示 */
+            text-overflow: ellipsis;
+    
+        }
+    </style>
+</head>
+<body>
+    
+
+    <h3>开心</h3>
+    <h3>我今天心情很不错，利格楞，了个冷</h3>
+    <h3>因为我今天给爸爸挂号都挂上了</h3>
+    <h3>希望下周一切顺利,各路天神保佑！</h3>
+    <h3>一生平安</h3>
+    <h3>大吉大利</h3>
+</body>
+</html>

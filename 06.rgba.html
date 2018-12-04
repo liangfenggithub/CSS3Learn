@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>rgba</title>
+    <style>
+        body{
+            margin:100px 200px;
+        }
+        .box{
+            width:500px;
+            height: 400px;
+            /* background:dodgerblue; */
+            /* 使用rgba来透明色块，显示下方的汉字，前三个参数是rgb的值，
+            最后一个参数透明度，取值范围0-1，0是完全透明，1是不透明
+            其实称为不透明度更好记 */
+            background:rgba(30,144,255,0.5);
+            position: relative;
+            top:-100px;
+            left:-100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>嘿，能看到我吗</h1>
+    <div class="box">
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>盒子的最大最小尺寸</title>
+    <style>
+        .box{
+            width: 80%;
+            height: 500px;
+            background: dodgerblue;
+            margin:100px auto;
+            /* 如果只单纯设置宽度是80%，那么box会随浏览器缩放而缩放，我们可以利用最大最小尺寸 */
+            /* 限定盒子的最大最小尺寸，当缩放至设定值时，停止缩放。 */
+            max-width: 1000px;
+            min-width:500px;
+            /* 高度height同理 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+</html>

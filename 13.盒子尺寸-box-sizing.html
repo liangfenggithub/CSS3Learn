@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>盒子尺寸box-sizing</title>
+    <style>
+        .box{
+            width:800px;
+            height: 200px;
+            border:solid 5px rebeccapurple;
+            margin:100px auto;
+            padding:30px;
+            /* 怪异模式 */
+            box-sizing: border-box;
+        }
+        .normalbox{
+            width:800px;
+            height: 200px;
+            border:solid 5px rebeccapurple;
+            padding:30px;
+            margin:100px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="normalbox">
+        我是正常的盒子，width 800px不包括border和padding
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ipsa dolorem animi molestias pariatur! Eligendi veritatis quidem molestiae, nostrum minus quasi cum doloremque ex rem nemo atque rerum corrupti autem!
+        </div>
+    <div class="box">
+        怪异模式下的盒子，width 800px包含pading和border
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quis voluptates fuga totam aliquid quo nihil laudantium exercitationem assumenda nam! Vitae, sapiente excepturi explicabo quia alias maxime optio fugiat pariatur.
+
+    </div>
+   
+</body>
+</html>

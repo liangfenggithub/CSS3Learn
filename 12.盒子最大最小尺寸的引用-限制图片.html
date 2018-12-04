@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>盒子最大最小尺寸的应用，限制图片</title>
+    <style>
+        .box{
+            width: 800px;
+            height: 800px;
+            border:solid 1px dodgerblue;
+            margin:20px auto;
+
+            
+        }
+        img{
+            /* 图片超出box的宽度，导致排版混乱，此时使用最大宽度限定图片尺寸 */
+            max-width: 790px;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="./file/a.png" alt="">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque fuga nobis ut debitis possimus dolorum hic rem quidem quas, excepturi libero non explicabo aut, aliquid fugit, officia officiis nulla <deleniti class="lorem"></deleniti>
+        <img src="./file/b.jpg" alt="">
+    </div>
+</body>
+</html>

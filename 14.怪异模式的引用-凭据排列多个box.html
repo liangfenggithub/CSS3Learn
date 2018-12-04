@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>怪异模式</title>
+    <style>
+        .ll{
+            width:1000px;
+            height: 300px;
+            border: solid 5px #ccc;
+            margin: 50px auto; /*居中*/
+        }
+        .normalbox{
+            width: 20%;
+            height: 100px;
+            border: solid 5px dodgerblue;
+            float:left;
+        }
+        .box{
+            width: 20%;
+            height: 100px;
+            border: solid 5px dodgerblue;
+            float:left;
+
+            /* 由于有边框，即使设置小盒子的宽度是20%也不能再一行中放下，
+            此时使用怪异模式，使得20%的width包含border和padding，无论是多大的border和padding，都能在一行中平铺显示
+             */
+            box-sizing: border-box;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="ll">
+        <div class="normalbox">
+            正常box
+        </div>
+        <div class="normalbox">
+            
+        </div>
+        <div class="normalbox">
+
+        </div>
+        <div class="normalbox">
+            
+        </div>
+        <div class="normalbox">
+
+        </div>
+        
+    </div>
+    <div class="ll">
+        <div class="box">
+            怪异模式下的box
+        </div>
+        <div class="box">
+            
+        </div>
+        <div class="box">
+
+        </div>
+        <div class="box">
+            
+        </div>
+        <div class="box">
+
+        </div>
+       
+        由于有边框，即使设置小盒子的宽度是20%也不能再一行中放下，
+        此时使用怪异模式，使得20%的width包含border和padding，无论是多大的border和padding，都能在一行中平铺显示
+    </div>
+</body>
+</html>
