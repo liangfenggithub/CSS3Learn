@@ -114,6 +114,49 @@ content-box就是正常的width只包含内容
 
 **怪异模式**很有用，比如在页面中平均排列五个块级元素，如果每个块级元素由边框，即使设为每个宽度为20%也不行，因为有边框一行放不下，此时设置boxsizing为border-box，width的20%包含边框，无论边框多大，都能现在在一行内。
 
+### 分栏效果
+分栏和报纸中的效果一致，直接使用下面相关属性就可以
+
+1. column-width  栏宽
+2. column-count  列数
+3. column-gap    列间距 参数和border一样
+4. column-rule   分割线
+
+另外有两个前缀
+1. -moz-  是针对firefox的设置，
+2. -webkit- 是针对chrome和苹果safari的设置
+3. -o- Opera浏览器
+4. -ms-  ie浏览器
+
+### 背景图尺寸
+
+背景图尺寸是CSS3新增属性
+
+1. background-size  宽度 高度 参数的宽高可以是n%或者具体的像素值。
+
+### 背景线性渐变
+
+除了背景图和背景颜色还可以设置背景线性渐变,利用background的数值值liner-gradient实现 （其中gradient是梯度的意思）
+
+1. background: linear-gradient(开始位置，渐变颜色[，渐变颜色，渐变颜色])  后加多个渐变颜色。
+
+这个属性有兼容性问题，必须使用特定浏览器的前缀才能被浏览器识别。比如在谷歌浏览器下，其属性为  -webkit-liner-gradient
+
+### 轮廓线
+
+盒子轮廓线和盒子的边框border的效果一样，唯一不同的是盒子轮廓线outline不占用空间。
+
+1. outline: solid 2px red; 参数和border一样。
+
+
+### 动画
+CSS3可以做动画了，不必像之前使用jquery中的 animaate了
+
+1. transition ： width 2s;  
+
+transition 这个单词的意思是过度，用于监控属性的变化，如果被监控的属性发生变化，那么就是通过运动，运动过去。其中“width”是要监控的属性，“2s”是变化时间为2秒，也可直接把要监控的属性写为all，这是懒人方法。
+
+transition不知能实现CSS控制的动画，也能监控js做出属性改变，实现动画。
 
 
  

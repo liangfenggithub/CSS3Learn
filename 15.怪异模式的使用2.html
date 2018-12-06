@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>怪异模式的应用2</title>
+    <style>
+        *{
+            margin: 0px;
+            padding:0px;
+        }
+        body{
+            margin:100px 100px;
+        }
+        ul{
+            width:300px;
+            height: 500px;
+            border: solid red 2px;
+            
+
+            /* 让列表中的菜单由距离外框的上边距，且整体高度不便可以使用box-sizing，使得具有padding-top的整体高度仍然为500px; */
+            padding-top:30px;
+            box-sizing: border-box;
+        }
+        li{
+            list-style: none;
+            width:300px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 30px;
+
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>手机</li>
+        <li>电脑</li>
+        <li>大米</li>
+        <li>白面</li>
+        <li>柴火</li>
+        <li>麻油</li>
+        <li>酱油</li>
+        <li>陈醋</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>背景图尺寸</title>
+    <style>
+        .box{
+            height: 800px;
+            width:500px;
+            border: solid 2px red;
+            background:url(./file/b.jpg) no-repeat;
+
+            /*css3新增可设置背景图大小*/
+            background-size:100% 100%; 
+            /*可以为宽高百分比，也可以是具体像素值*/
+            background-size: 400px 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+</html>
