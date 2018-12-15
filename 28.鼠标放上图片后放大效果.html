@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>图片hover上放大效果</title>
+</head>
+<style>
+    *{
+        padding:0px;
+        margin:0px;
+    }
+    .box{
+        width:400px;
+        height:320px;
+        border:solid 2px dodgerblue;
+        margin:100px auto;
+        /*图片放大后超出的部分隐藏*/
+        overflow: hidden;
+
+       
+    }
+    img{
+        width:400px;
+        height: 320px;
+        /*动画效果*/
+        transition: all 2s;
+    }
+
+    /*缩放: 当box被鼠标放上后，box里面的img放大*/
+    .box:hover img{
+        transform:scale(1.5,1.5);
+    }
+</style>
+<body>
+    <div class="box">
+        <img src="./file/c.png" alt="">
+    </div>
+</body>
+</html>

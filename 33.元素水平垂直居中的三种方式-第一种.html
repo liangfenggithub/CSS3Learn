@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>元素水平垂直居中第一种方式</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        .box{
+            width:600px;
+            height: 400px;
+            background: dodgerblue;
+            
+            /*第一种水平垂直居中方式*/
+            /* 这种方式使用绝对定位，然后设置top，bottom，left，right都为0，再设置margin为auto就能实现自动水平垂直居中 */
+            position: absolute;
+            top:0px;
+            left:0px;
+            right:0px;
+            bottom:0px;
+            margin:auto;
+            
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        这种方式用绝对定位，前提是元素有绝对的宽度和高度
+    </div>
+</body>
+</html>

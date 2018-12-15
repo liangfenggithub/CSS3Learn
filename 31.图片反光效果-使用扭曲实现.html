@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>图片反光效果，使用扭曲实现</title>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+        }
+        html{
+            background: slategrey;
+        }
+        .box{
+            height: 270px;
+            width: 300px;
+            margin:100px auto;
+            position: relative;
+             /*隐藏图片外的闪光条*/
+            overflow: hidden; 
+        }
+        img{
+            height: 270px;
+            width: 300px;
+            position: absolute;
+        }
+        .box .fg{/*闪光条*/
+            height: 270px;
+            width:50px;
+            /*背景设置为渐变色，显得不生硬*/
+            background: -webkit-linear-gradient(left,transparent,rgba(255,255,255,0.8),transparent);
+            
+
+            /*扭曲*/
+            transform: skew(-30deg,0);
+
+            position: absolute;
+            left:-150px;/*默认隐藏掉*/
+            opacity:0.5;
+            
+        }
+        .box:hover .fg{
+            left:380px;
+            /*只在hover的时候监控动画，*/
+            transition: all 0.3s;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="./file/d.png" alt="">
+        <div class="fg">
+
+        </div>
+    </div>
+</body>
+</html>

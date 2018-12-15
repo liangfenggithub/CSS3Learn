@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>动画-transition-监听js</title>
+    <style>
+        #box{
+            width:200px;
+            height:100px;
+            background:dodgerblue;
+            margin:100px auto;
+            transition: all 1s;
+        }
+        #btn{
+            display: block;
+            margin:30px auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+
+    </div>
+    <button value="改变box高度" id="btn">改变box高度</button>
+    <script>
+        window.onload = function(){
+            var box = document.getElementById("box");
+            var btn = document.getElementById("btn");
+            var flag = true;
+
+            btn.onclick = function(){
+                if(flag == true){
+                    flag = !flag;
+                    box.style.height = "500px";
+                }else{
+                    flag = !flag;
+                    box.style.height = "200px";
+                }
+               
+
+            }
+        }
+        
+
+        
+    </script>
+</body>
+</html>

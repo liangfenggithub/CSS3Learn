@@ -5,8 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>动画-transition</title>
+    <style>
+        .box{
+            width:200px;
+            height:100px;
+            background:dodgerblue;
+            /*transition这个单词是过渡的意思，tranition的作用是监视被选择元素的属性，一旦被监视属性（下边的width）
+            发生改变，则在设定时间内（2s）改变到改变值。其中“width”是监视的属性，“2s”是动作时间，其中width可以为all
+            即监视所有属性
+            */
+            transition: width 2s;
+        }
+
+        .box:hover{
+            width:500px;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="box">
+
+    </div>
 </body>
 </html>

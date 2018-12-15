@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>孙悟空旋转金箍棒</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        .box{
+            width:600px;
+            height:450px;
+            border:solid 1px dodgerblue;
+            margin:50px auto;
+            background: url(./file/swk.png) no-repeat right top;
+            position: relative;
+        }
+        .jgb{
+            width: 25px;
+            height: 300px;
+            border: solid 1px orange;
+            position: absolute;
+            left:160px;
+            top:90px;
+            transition:all 2s ;/*默认是变速运动*/
+            /* transition:all 2s linear; /*是匀速运动*/
+        }
+        .jgb li{
+            list-style:none;
+            width:25px;
+        }
+        .jgb li:first-child{
+            height: 50px;
+            background:yellow;
+        }
+        .jgb li:nth-child(2){
+            height: 200px;
+            background:red;
+            text-align:center;
+            font-size:20px;
+            font-weight: 600;
+            color:#fff;
+            padding-top:35px;
+            /*这里使用怪异模式，否则加上padding-top后金箍棒长度会变长*/
+            box-sizing: border-box;
+        }
+        .jgb li:last-child{
+            height: 50px;
+            background:yellow;
+        }
+        /*box被hover时让金箍棒旋转*/
+        .box:hover .jgb{
+            transform:rotate(360deg);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <!-- 金箍棒用ul和li实现 -->
+        <ul class="jgb">
+            <li></li>
+            <li>如意金箍棒</li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>

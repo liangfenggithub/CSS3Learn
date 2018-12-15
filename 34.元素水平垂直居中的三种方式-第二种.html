@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>元素水平垂直居中第一种方式</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        .box{
+            width:600px;
+            height: 400px;
+            background: dodgerblue;
+            
+            /*第二种水平垂直居中方式*/
+            /* 这种方式先定位，左右偏移50%，然后再把margin-top和margin-left设为元素宽高的负一半的值 */
+            position: absolute;
+            top:50%;
+            left:50%;
+            margin-top:-200px;
+            margin-left:-300px;
+            
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        这种方式用绝对定位，前提是元素有绝对的宽度和高度
+    </div>
+</body>
+</html>

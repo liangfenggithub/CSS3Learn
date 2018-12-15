@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>聚美优品固定导航的实现</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        .nav{
+            width:50px;
+            height:300px;
+            border:solid 1px #ccc;
+            background:orchid;
+            position: fixed;
+            top:150px;
+            left:50px;
+            opacity: 1;/*完全不透明*/
+            transform:scale(1.5,1.5);/*放大效果*/
+        }
+        .navh{
+            opacity: 0;/*完全透明*/
+            transform:scale(1,1);/*保持原来的大小*/
+        }
+    </style>
+</head>
+<body>
+    <!-- 放图片撑开滚动条 -->
+    <img src="./file/jumei.png" alt="">
+    <div class="nav navh">
+        
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            // 、、滚动监听事件
+            $(window).scroll(function(){
+                var xx = $(document).scrollTop();
+                document.title = xx;
+                if(xx>800){
+                    $(".nav").removeClass("navh");
+                }else{
+                    $(".nav").addClass("navh");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
