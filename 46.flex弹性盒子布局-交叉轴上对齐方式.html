@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex弹性盒布局-交叉轴上对齐方式</title>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+        }
+        ul{
+            width:1000px;
+            height: 500px;
+            border:solid red 2px;
+            
+            display: flex; /* 将父级元素转为flex容器 */
+            flex-direction: row;    /*设置水平为主轴方向，默认即是*/
+            /*主轴对齐方式：两端对齐*/
+            justify-content: space-between;
+
+            /*交叉轴上对齐方式*/
+            /*交叉轴开始处对齐*/
+            /* align-items: flex-start; */
+
+            /*交叉轴结束处*/
+            /* align-items:flex-end; */
+
+            /*交叉轴中心对齐*/
+            align-items:center;
+
+            /*交叉轴默认对齐：如果项目没有高度或者设置为auto，将占满整个容器的高度*/
+            /* align-items:stretch; */
+
+            /*项目第一行文字的基线对齐*/
+            /* align-items:baseline; */
+        }
+        li{
+
+            width:100px;
+            
+            height:200px;
+            background:dodgerblue;
+            border:solid 1px purple;
+            line-height: 200px;
+            list-style:none;
+            text-align: center;
+            font-size:30px;
+            color:#fff;
+            
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li style="height:200px;">1</li>
+        <li style="height:250px;">2</li>
+        <li style="height:280px;">3</li>
+        <li style="height:340px;">4</li>
+        <li style="height:300px;">5</li>
+        <li style="height:auto;">6</li>
+        <li style="height:300px;">7</li>
+    </ul>
+</body>
+</html>

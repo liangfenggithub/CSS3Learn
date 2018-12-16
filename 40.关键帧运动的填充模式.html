@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>关键帧运动的填充模式</title>
+    <style>
+        .box{
+            width:100px;
+            height:200px;
+            border:solid red 2px;
+            background: dodgerblue;
+
+            /* 指定运动规则 */
+            animation: changewidth 3s 1s; /*运动规则名称，持续运动时间，延迟时间*/
+            
+            /*运动填充模式*/
+            /*运动结束后保持运动最后一帧状态*/
+            /* animation-fill-mode: forwards; */
+            
+            /*在延迟期间保持开始运动的状态*/
+            /* 实测无效 不知道为什么 */
+            /* animation-fill-mode：backwards;  */
+            
+            /*forwards和backwords都有效*/
+            animation-fill-mode: both:
+        }
+
+        /*设置运动状态*/
+        @keyframes changewidth{
+            from{
+                width: 500px;
+            }
+            to{
+                width: 1000px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+</html>

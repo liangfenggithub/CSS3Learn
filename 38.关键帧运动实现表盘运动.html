@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>关键帧运动实现秒针</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+
+        }
+        .bp{
+            width:490px;
+            height:490px;
+            margin:50px auto;
+            /* border: solid red 5px; */
+            background: url(./file/bp.png) no-repeat;
+            position: relative;/*这里的相对定位是为了内部的秒针定位提供参考*/
+        }
+        /*秒针*/
+        .bp .seconed{
+            width:8px;
+            height: 200px;
+            background: dodgerblue;
+            position: absolute;
+            top:220px;
+            left:243px;
+
+            /*指定关键帧运动*/
+            /*原型： animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: mz 60s linear infinite;/*指定规则名称为“mz”，运动时间3s，匀速运动，无限循环*/
+
+            /* 指定旋转原点 */
+            transform-origin: 4px 25px;/*这里的像素值分别是对旋转元素左上角和距离：距离上边，距离左边*/
+        }
+
+        /*设置关键帧运动规则*/
+        @keyframes mz{
+            from{
+                transform:rotate(0deg);/*旋转0度*/
+            }
+            to{
+                transform:rotate(360deg);/*选择360度*/
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="bp">
+        <div class="seconed">
+            <!-- 秒针 -->
+        </div>
+    </div>
+</body>
+</html>

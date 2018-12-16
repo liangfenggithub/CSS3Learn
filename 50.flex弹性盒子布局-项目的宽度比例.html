@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex弹性盒布局-项目的顺序</title>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+        }
+        ul{
+            width:1000px;
+            height: 500px;
+            border:solid red 2px;
+            
+            /* 将父级元素转为flex容器 */
+            display: flex;
+            /*水平对齐方式*/
+            justify-content: space-between;
+        }
+        li{
+            /*
+                在这里7个li的总宽度大于ul的宽度，那么每个li自动均分ul的宽度进行主轴排列，设置的li宽度无效
+            */
+            width:200px;
+            
+            height:100px;
+            background:dodgerblue;
+            border:solid 1px purple;
+
+            list-style:none;
+            text-align: center;
+            font-size:30px;
+            color:#fff;
+            flex:1;/*设定每个项目宽度比例为1*/
+        }
+        /*      此例中，项目的总宽度大于容器的宽度，那么项目的宽度就自动均分，设定的项目宽度失效
+            此时可以指定某一个项目和他兄弟项目的宽度比例，如下*/
+        li:nth-child(2){
+            /*设定第二个项目宽度比例为2*/
+            flex:2;
+        }
+    </style>
+</head>
+<body>
+    
+    <ul>
+        
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+
+
+    </ul>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex弹性盒布局</title>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+        }
+        ul{
+            width:1000px;
+            height: 500px;
+            border:solid red 2px;
+            
+            /* 将父级元素转为flex容器 */
+            /* 特点：
+            1.元素中项目默认在容器中以主轴方向排列
+            2.如果项目总宽度小于容器宽度，则按照设定宽度显示，如果大于，则项目自动均分容器宽度，设置的原宽度无效 */
+
+
+            display: flex;
+
+        }
+        li{
+            /*
+                在这里7个li的总宽度大于ul的宽度，那么每个li自动均分ul的宽度进行主轴排列，设置的li宽度无效
+            */
+            width:200px;
+            
+            height:200px;
+            background:dodgerblue;
+            border:solid 1px purple;
+            line-height: 200px;
+            list-style:none;
+            text-align: center;
+            font-size:30px;
+            color:#fff;
+            
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+    </ul>
+</body>
+</html>

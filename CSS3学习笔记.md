@@ -166,6 +166,10 @@ transition不知能实现CSS控制的动画，也能监控js做出属性改变�
 
 元素旋转后还是占用原来的位置，旋转默认的基准点是中心店，基准点可调，后边介绍。
 
+指定旋转的原点：
+
+1. transform-origin: 4px 25px;/*这里的像素值分别是对旋转元素左上角和距离：距离上边，距离左边*/
+
 
 #### 缩放
 
@@ -219,11 +223,127 @@ transition不知能实现CSS控制的动画，也能监控js做出属性改变�
 
 
 ### animation关键帧运动
+animation关键帧运动效果和transition实现效果差不多，不过这种运动就是在不经过触发自己就能执行的运动，分为两步，第一：指定关键帧开始和结束的状态，第二：在选择器中指定运动规则。
 
 
+```html
+<!-- 设置运动规则： -->
+@keyframes name{ /*指定运动规则的名称为name*/
+    from{
+        css属性
+    }
+    to{
+        css属性
+    }
+}
 
+<!-- 运动规则还可以指定关键帧的状态，如下
+ -->
+ @keyframes name{
+     0%{
+          css属性
+     }
+     50%{
+          css属性
+     }
+     100%{
+          css属性
+     }
+ }
 
+<!-- 指定运动规则： -->
+选择器{
+    animation-name：name;//规则名称
+    animation-duration：3s;//运动时间
+    <!--最少有以上两个： 规则名称和持续时间就能运动 -->
+
+    animation-timing-function:linear;//匀速变化，默认是变速
+    animation-delay：2s;//延迟两秒执行
+    animation-iteration-count：3;//运动次数，指定infinite就是无限重复运动。
+    animation-directioin:alternate;//轮流反相运动（见孙悟空旋转金箍棒）
+    animation-fill-mode: forwards | backwards | both; //运动填充模式 比较少用
+    <!-- 
+        forwards：运动结束后保持运动结束的状态 
+        backwards:在延迟期间保持开始运动的状态
+        both：表示forwards和backwards同时存在 -->
+
+    <!-- 运动的暂停 -->
+    animation-play-status:pause; //运动暂停
+
+    <!-- 还可将上述的animation写到一起 -->
+    animation： name time linaer 1s infinite;//名称，时间，运动形式，延迟时间，运动次数
+}
+
+```
+
+### flex弹性盒子布局
+
+#### 基本概念
+
+* flex是flexible box的缩写，意为“弹性布局
+，用来为盒装模型提供最大的灵活性。
+* 任何一个容器都可以指定为flex布局。
+* 采用flex布局的元素，成为Flex容器（flex container）简称"**容器**“，他的所有子元素都自动成为容器成员，成为flex项目（flex item），简称”**项目**“
+
+* 容器默认存在两根轴，水平叫”主轴“（main axis）和垂直的交叉轴（cross axis）起始位置和结束位置分别成为：main start，main end,cross start cross end;
+
+* 项目默认沿着主轴排列，单个项目占用的主轴控件叫做main size，占据的交叉轴控件叫做cross size。
+
+#### 特点
+1. 弹性盒模型容器中的项目默认在主轴上排列
+2. 如果项目总宽度，小于容器宽度，按照设置的宽度正常排列;如果项目总宽度大于容器宽度，那么项目宽度均分总宽度，设置的宽度就无效了。
+
+#### 主轴方向
+主轴方向可以定义，主轴和交叉轴永远是交叉的。
+
+1. flex-direction: row-reverse|column|column-reverse 定义主轴方向
+
+#### 元素在主轴上对齐方式
+项目在容器的主轴上的对齐方式可以利用justify-content设置
+1. justify-content: flex-start|flex-end|center|space-between|space-around；定义主轴上对齐方式，
+
+分别是:
+flex-start:从主轴开始起对齐排列，
+flex-end:结束起对齐排列，
+center:居中对齐排列，
+space-between:两端对齐-项目之间间隔都相等
+space-around:每个项目两侧间隔相等。
+
+#### 元素在交叉轴上的对齐方式
+
+1. align-items：flex-start|flex-end|center|baseline|stretch；
+
+其中：
+flex-start： 交叉轴的起点对齐。
+flex-end：交叉轴的终点对齐
+center：交叉轴的中点对齐
+baseline：项目的第一行文字的基线对齐
+stretch：（默认值）如果项目未设置高度或设置为auto，将占满整个容器的高度 （stretch的意思是拉伸）
+
+#### 项目的换行
+
+1.flex-wrap：wrap|wrap-reverse; 用于设置项目换行。
+
+wrap：如果子元素也就是项目的总宽度大于父级元素也就是容器的宽度，那么一行能放多少则放多少，多余的放在下一行
+wrap-reverse; 从下方开始换行
  
+#### 多根轴线的对齐方式
+
+多根轴线的排列就是多行项目的排列方式
+ /* 这个属性没看懂 */
+
+1. align-content: flex-start|flex-end|center|space-between|space-around；
+
+#### 项目的顺序
+
+1. order：3; 默认为0，越小排列越靠前
+
+#### 项目的宽度比例
+是项目之间的比例
+
+1. flex：2 ； 默认为1，宽度的比例
+
+
 
 
 

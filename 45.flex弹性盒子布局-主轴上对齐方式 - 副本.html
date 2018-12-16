@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex弹性盒布局-主轴上对齐方式</title>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+        }
+        ul{
+            width:1000px;
+            height: 500px;
+            border:solid red 2px;
+            
+            display: flex; /* 将父级元素转为flex容器 */
+            flex-direction: row;    /*设置水平为主轴方向，默认即是*/
+            /*对齐方式*/
+            /*从主轴开始处对齐 如果设置flex-direction为row即水平方向下相当于左对齐*/
+            /* justify-content: flex-start; */
+
+            /*从主轴结束处对齐排列 */
+            /* justify-content:flex-end; */
+
+            /*两端对齐*/
+            justify-content: space-between;
+
+            /*每个项目间隔相等*/
+            /* justify-content: space-around; */
+
+        }
+        li{
+
+            width:100px;
+            
+            height:200px;
+            background:dodgerblue;
+            border:solid 1px purple;
+            line-height: 200px;
+            list-style:none;
+            text-align: center;
+            font-size:30px;
+            color:#fff;
+            
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</body>
+</html>

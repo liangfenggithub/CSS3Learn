@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex弹性盒布局-多轴线的对齐方式</title>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+        }
+        ul{
+            width:1000px;
+            height: 500px;
+            border:solid red 2px;
+            
+            /* 将父级元素转为flex容器 */
+            display: flex;
+
+            
+            /*水平对齐方式*/
+            justify-content: space-between;
+
+            /*设置项目的换行：
+                如果项目的总宽度大于容器的宽度，那么可以设置容器内项目进行换行
+            */
+            /*按照设定的项目宽度，容器内一行内能放多少放多少，放不下的放下一行*/
+            flex-wrap: wrap;
+
+            /*多轴线排列*/
+            /* 这个属性没看懂 */
+
+            /* align-content: flex-start; */
+            /* align-content: flex-end; */
+            /* align-content: center; */
+            align-content: space-between;
+            /* align-content: space-around; */
+
+
+        }
+        li{
+
+            width:200px;
+            
+            height:100px;
+            background:dodgerblue;
+            border:solid 1px purple;
+
+            list-style:none;
+            text-align: center;
+            font-size:30px;
+            color:#fff;
+            
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+
+    </ul>
+</body>
+</html>

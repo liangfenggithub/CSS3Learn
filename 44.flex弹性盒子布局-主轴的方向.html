@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex弹性盒布局-主轴的方向</title>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+        }
+        ul{
+            width:1000px;
+            height: 500px;
+            border:solid red 2px;
+            
+            /* 将父级元素转为flex容器 */
+            /* 特点：
+            3. 元素默认按照主轴方向排列，主轴方向可以设定，主轴和交叉轴永远垂直
+            */
+            display: flex;
+            /*设置主轴的方向*/
+
+            /*设置主轴方向为：水平反向排列*/
+            /* flex-direction: row-reverse; */
+            /*设置主轴方向为：垂直排列*/
+            /* flex-direction: column; */
+            /*设置主轴方向为：垂直反向排列*/
+            flex-direction: column-reverse;
+
+
+        }
+        li{
+            /*
+                在这里7个li的总宽度大于ul的宽度，那么每个li自动均分ul的宽度进行主轴排列，设置的li宽度无效
+            */
+            width:200px;
+            
+            height:200px;
+            background:dodgerblue;
+            border:solid 1px purple;
+
+            list-style:none;
+            text-align: center;
+            font-size:30px;
+            color:#fff;
+            
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>关键帧运动</title>
+    <style>
+        .box{
+            width:300px;
+            height: 200px;
+            background:dodgerblue;
+            
+            /*2.指定运动规则*/
+            animation-name:change; /*指定名称*/
+            animation-duration: 2s;/*指定运动持续时间*/
+            animation-delay:0.5s;/*延迟执行时间*/
+            animation-timing-function: linear;/*指定线性运动，默认为变速运动*/
+            animation-iteration-count: infinite;/*指定运动次数，infinite是无限次也可以制定具体的运动次数，如5此*/
+        }
+
+        /*1. 设定关键帧运动规则*/
+        @keyframes change{
+            from{
+                width:200px;
+            }
+            to{
+                width:800px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+</html>

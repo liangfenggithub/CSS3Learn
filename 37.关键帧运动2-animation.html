@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>关键帧运动</title>
+    <style>
+        .box{
+            width:300px;
+            height: 200px;
+            background:dodgerblue;
+            
+            /*2.指定运动规则*/
+        /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+           animation: change 3s linear 0.5s infinite;/**/
+        }
+
+        /*1. 设定关键帧运动规则*/
+        /* 和上一种不同的是，规则还可以指定关键帧的状态，比如运动到n%的状态分别是什么样 */
+        @keyframes change{
+            0%{
+                width:200px;
+                background:dodgerblue;
+            }
+            40%{
+                width:600px;
+                background:purple;
+            }
+            80%{
+                width:1000px;
+                background: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+</html>

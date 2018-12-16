@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>关键帧运动抽奖效果</title>
+    <style>
+        .box{
+            width:500px;
+            height: 500px;
+            border: solid 1px red;
+            margin:100px auto;
+            position: relative;
+        }
+        #zhuanpan{
+            widows: 500px;
+            height: 500px;
+            transition:all 3s;
+           
+        }
+        #zhizhen{
+            width: 130px;
+            height: 130px;;
+            position: absolute;
+            top:180px;
+            left:180px;
+            transform:rotate(-135deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img id="zhuanpan" src="./file/cj.png" alt="">
+        <img id="zhizhen" src="./file/cj2.png" alt="">
+    </div>
+    <script>
+        window.onload=function(){
+            var zp = document.getElementById("zhuanpan");
+            var zz = document.getElementById("zhizhen");
+            zz.onclick= function(){
+
+                if(Math.random() < 0.8){/*生成0-1的随机小数*/
+                    zp.style.transform = "rotate(1080deg)";//如果小于0.8则转3圈
+                }
+                else{//如果随机数大于0.8，则随机转一个1000-1360的角度
+                    var x = Math.floor(Math.random((1440-1080+1)+1080));
+                    console.log(x);
+                    zp.style.transform = "rotate("+x+")";
+
+                }
+                
+            }
+        }
+    </script>
+</body>
+</html>
